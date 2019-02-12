@@ -1,9 +1,9 @@
 class EventMailer < ApplicationMailer
   default from: 'no-reply@monsite.fr'
  
-  def newevent_email(user)
+  def newevent_email(event)
     #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
-    @user = user 
+    @event = event 
 
     #on définit une variable @url qu'on utilisera dans la view d’e-mail
     @url  = 'http://monsite.fr/login' 
